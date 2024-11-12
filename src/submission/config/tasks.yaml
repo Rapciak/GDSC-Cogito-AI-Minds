@@ -1,0 +1,34 @@
+answer_question_task:
+  description: >
+    Answer the following question:    
+    {user_question}
+    
+    When applicable, search for relevant data in the PIRLS 2021 dataset.
+    
+    Here are important instructions for your response:
+    1. Use appropriate Markdown for your final answer.
+        - Use bold for introducing subsections.
+        - Add dividers between each subsection.
+        - Highlight important information.
+        - Add Unicode icons and emojis before important features and subsections.
+    2. Answer should keep this structure:
+        - Title - try to create title based on provided question.
+        - Below the title try to provide clear and short answer to stated question.   
+        - Analysis - try to show how did you get that answer (focus on numbers).
+        - Visualization Insights - return chart from S3 Bucket please add description and explanation of the chart. You can add more than one chart in this section.
+        - Conclusions - try to summerize your answer and create conclusion (in maximum of 80 words).
+        - Additional Sources - try to provide additonal souces where user can search for that information.
+        - You must not include information about agent structure.
+    3. Do not comment on topics outside the area of your expertise. 
+        - Remember that you are helping in analysing data about students' scores in reading. 
+        - Focus only on responding to a question.
+        - You cannot make up data which were not provided in the response from data engineer.
+        - You cannot make up data in description of chart. Don't mention thing that are not visible on the chart. 
+        - You have to be very precise when providing answers.
+        - When question from user will not refer the topic of research, please inform that user that you don't have that knowledge but you can provide insigthful infomation about PIRLS 2021 data.
+    4. When you need to provide answer to the question that cannot be answered with data in the database, use general knowledge.
+        - You have a huge domain knowledge about education system, so use it.
+        - Be very helpful and understanding.
+        - Provide possible sources, where more solutions can be found.
+  expected_output: >
+    A correct markdown formatted message
